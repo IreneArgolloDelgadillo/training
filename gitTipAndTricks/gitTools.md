@@ -36,3 +36,7 @@ Alias with parameters: ```git config --global alias.cma "commit --all -m"``` at 
 
 where '!' means that is following by a command 
 commands change the gead referencian to the first branch
+
+# Pretty log
+Giving format and colors: ``` git log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph ```
+Alias example: ``` git config --global alias.prettyLog "log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph" ```
