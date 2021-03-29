@@ -22,4 +22,17 @@ You also can use ZSH Powerlevel9k Theme for ubuntu
 - ```git config --global alias.cma "commit --all -m"```
 - ```git config --global alias.qm '!git checkout $1;git merge @{-1}'```
 
-to define an alias type: git config alias.{alias name} {command}
+- To define an alias type: git config alias.{alias name} {command}
+- To see available alias list: ```cat .git/config | grep -A 1 "\[alias\]"```
+
+Alias can be defined, for a report, for a user or globaly:
+- globaly: git config --global alias.{alias name} {command}
+
+Alias for a convination of commands: ```git config --global alias.st "status --short --branch"```
+Alias with parameters: ```git config --global alias.cma "commit --all -m"``` at the execution time, you should pass the parameter in order, like: ``` git cma "Commit message exmple" ```
+
+- Example of quick merge alias: 
+``` git config --global alias.qm '!git checkout $1;git merge @{-1}' ```
+
+where '!' means that is following by a command 
+commands change the gead referencian to the first branch
