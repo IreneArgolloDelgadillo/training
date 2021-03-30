@@ -49,4 +49,12 @@ Alias example: ``` git config --global alias.prettyLog "log --pretty='%Cred%h%Cr
 - Here an example of using the previous abreviations (to see more log pretty abreviations > git-scm/docs/pretty-formats): git log --pretty='%h | %d %s (%cr) [%an]'
 - Giving formats and colors: ``` git log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph ```
 
-
+# Git diff
+alias for seen the difference to show the first 10 lines of differnece: ``` git config --global alias dp 'diff --word-diff --unified=10' ```
+- to see more readable: git diff --patience
+# Git show
+ - Example of use: git show head~2
+ - git config --global alias so "show --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset"
+ - previous alias execution example(sending multiple aprameters):  git so head --no-patch
+ - git so head --stat
+ - -git cat-file -p head
