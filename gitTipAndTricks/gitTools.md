@@ -38,5 +38,15 @@ where '!' means that is following by a command
 commands change the gead referencian to the first branch
 
 # Pretty log
-Giving format and colors: ``` git log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph ```
 Alias example: ``` git config --global alias.prettyLog "log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph" ```
+
+- We can say to how we want to se the log history, for example if we want to see it on one line (this will show the hash code commit followed by the commit message): git log --pretty=oneline
+- %h = abreviate commit hash 
+- %d = any reference pointed to the commit
+- %s = contains the first line of the commit message or subject
+- %cr = represent the date time where the commit has made relative to now
+- %an = represents the name of the commit author
+- Here an example of using the previous abreviations (to see more log pretty abreviations > git-scm/docs/pretty-formats): git log --pretty='%h | %d %s (%cr) [%an]'
+- Giving formats and colors: ``` git log --pretty='%Cred%h%Creset | %C(yellow)%d%Creset %s %Cgreen(%cr)%Creset %C(cyan)[%an]%Creset' --graph ```
+
+
