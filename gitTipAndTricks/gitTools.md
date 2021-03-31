@@ -58,3 +58,16 @@ alias for seen the difference to show the first 10 lines of differnece: ``` git 
  - previous alias execution example(sending multiple aprameters):  git so head --no-patch
  - git so head --stat
  - -git cat-file -p head
+
+# Rewrite History 
+git commit  --amend 
+git commit --amend -D HEAD
+
+- Temporary snapshot
+- git reset --hard, destructive change
+- git reset --soft keeps the changes but removes the commit
+- git reset --mixed HEAD : to squash between similar commits
+- git rebase -i root --autosquash
+
+# Undo
+git config --global alias.undo ' !f() {git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
