@@ -71,3 +71,15 @@ git commit --amend -D HEAD
 
 # Undo
 git config --global alias.undo ' !f() {git reset --hard $(git rev-parse --abbrev-ref HEAD)@{${1-1}}; }; f'
+
+# Recovering commits
+- when we move edit the commits within the git history, git fsck --unreachable 
+- To see the reachable commits quantity: git fsck --unreable | wc -l
+- to see including the unreachable commits and to ignore the reference log entries: git fsck --unreachable --no-reflogs | wc -l
+- the difference between the 2 previosu commands represents the unreachabel commits quantity that are not reachable from a branch or tag, but are still rechable from the reference logs
+- Default time expiratino for reachable commits: 60 days from the commit day
+- Default time expiration for unreachable commits: 30 days conting from the commit day
+- to change the expiration date set: ```gc.reflogExpire ``` and ``` gc.reflogExpireUnreachable ```
+- Recover commit from the ref log, by using reset or cherry-pick
+- git log --grep=C --walk-reflogs
+- to force move a branch to a commit: git branch -f master(branch name) HEAD(can be hascommit)
