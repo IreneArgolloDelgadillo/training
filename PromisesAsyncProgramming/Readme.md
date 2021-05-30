@@ -6,6 +6,9 @@
 
 | Home: http://localhost:3000/home|
 
+# Iterating with Async/Await
+Async funtion can be used only in a await function
+
 # Training questions:
 1. In what cases is possible a Promise fullfills its request by entering to **then** function, but stills returning a status different of 200?
 ```
