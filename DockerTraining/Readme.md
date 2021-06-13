@@ -5,6 +5,8 @@ manifest file has information about the relationshipt between layers
 
 # Some commands
 - sudo usermod -aG docker username : agrega el usuario username al grupo de usuario 'docker'
+- sudo docker history redis
+- docker image rm redis
 
 # How works / Main concepts
 1. Kernel Internals: has namespaces] | controls groups | virtual machinnes 
@@ -15,3 +17,4 @@ Docker uses a client-server architecture
 # Working with images
 1. get manifest file
 2. pull layers
+
