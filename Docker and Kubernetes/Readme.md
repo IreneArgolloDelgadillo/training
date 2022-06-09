@@ -18,3 +18,5 @@ Docker uses a client-server architecture
 1. get manifest file
 2. pull layers
 
+
+
